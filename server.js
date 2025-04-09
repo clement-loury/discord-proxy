@@ -1,6 +1,12 @@
 const express = require('express');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args)); // important !
 const app = express();
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // autorise toutes les origines
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 const PORT = process.env.PORT || 3000;
 
 const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1359350363538329692/1T33ySJtdSxDHfG_Z0RT9Aac6LdFk1lE_iNwmrjT0oaaVxQeANWT3kru8XhLcSpw-bHf'; // remplace par le tien
