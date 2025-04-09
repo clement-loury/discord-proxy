@@ -9,7 +9,7 @@ app.use((req, res, next) => {
 });
 const PORT = process.env.PORT || 3000;
 
-const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1359350363538329692/1T33ySJtdSxDHfG_Z0RT9Aac6LdFk1lE_iNwmrjT0oaaVxQeANWT3kru8XhLcSpw-bHf'; // remplace par le tien
+const DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1359369765474271243/bT8eAOW0WgxazoUEKBMEis94CSw6Eg_Oo8eEmwxoQHXUwCay51AUY_u74ZoIZPyahpas'; // remplace par le tien
 
 app.use(express.json());
 
